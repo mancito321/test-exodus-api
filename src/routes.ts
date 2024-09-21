@@ -28,5 +28,11 @@ router.get("/product", async (ctx, next) => {
   } catch (error) {
     console.error("Error communicating with OpenAI API:", error);
   }
-  ctx.body = "Hello World! from API";
+  ctx.body = {
+    status: "success",
+    json: {
+      status: "success",
+      message: "Hello World from api",
+    },
+  };
 });
